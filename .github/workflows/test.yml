@@ -9,6 +9,8 @@ jobs:
     strategy:
       fail-fast: false
     environment: test
+    env:
+      JWT_SECRET: testJwtKey
     steps:
       - name: Checkout
         uses: actions/checkout@v2
