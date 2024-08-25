@@ -76,7 +76,7 @@
       "ts"
     ],
     "rootDir": "./",
-    "testRegex": ".*\\.spec\\.ts$",
+    "testRegex": ".*spec\\.ts$",
     "transform": {
       "^.+\\.(t|j)s$": "ts-jest"
     },
@@ -84,10 +84,19 @@
       "<rootDir>"
     ],
     "collectCoverageFrom": [
-      "**/*.(t|j)s"
+      "**/*.ts",
+      "!**/*.d.ts",
+      "!**/node_modules/**",
+      "!**/dist/**"
     ],
     "coverageDirectory": "../coverage",
+    "coveragePathIgnorePatterns": [
+      "/node_modules/",
+      "/dist/",
+      "\\.d\\.ts$"
+    ],
     "testEnvironment": "node",
-    "collectCoverage": true
+    "collectCoverage": true,
+    "testTimeout": 60000
   }
 }

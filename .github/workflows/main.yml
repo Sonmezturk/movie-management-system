@@ -1,0 +1,12 @@
+name: Deploy workflow
+
+on:
+  push:
+
+concurrency:
+  group: main-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    uses: ./test.yml
