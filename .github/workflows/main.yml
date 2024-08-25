@@ -11,5 +11,5 @@ jobs:
   # test:
   # uses: ./.github/workflows/test.yml
   deploy:
-    needs: test
+    # needs: test
     uses: ./.github/workflows/deploy.yml
