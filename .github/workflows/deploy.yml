@@ -12,4 +12,3 @@ jobs:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: 'movie-management-system-deploy'
           heroku_email: ${{ secrets.EMAIL }}
-          branch: 'master'
