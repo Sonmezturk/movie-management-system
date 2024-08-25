@@ -1,9 +1,7 @@
 name: Deploy
 
 on:
-  push:
-    branches:
-      - master
+  workflow_call:
 
 jobs:
   build:
@@ -13,5 +11,5 @@ jobs:
       - uses: akhileshns/heroku-deploy@v3.13.15
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
-          heroku_app_name: "movie-management-system"
+          heroku_app_name: 'movie-management-system'
           heroku_email: ${{secrets.EMAIL}}
