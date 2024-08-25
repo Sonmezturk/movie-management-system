@@ -9,4 +9,4 @@ concurrency:
 
 jobs:
   test:
-    uses: ./test.yml
+    uses: ./.github/workflows/test.yml
