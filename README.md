@@ -25,3 +25,7 @@ To run e2e tests, run:
 ```bash
 npm run test:e2e
 ```
+
+## Swagger Documentation
+
+http://localhost:3000/api
