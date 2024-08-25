@@ -7,12 +7,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - name: Set up Git remote for Heroku
-        run: git remote add heroku https://git.heroku.com/movie-management-system-deploy.git
       - uses: akhileshns/heroku-deploy@v3.13.15
         with:
           heroku_api_key: ${{ secrets.HEROKU_API_KEY }}
           heroku_app_name: 'movie-management-system-deploy'
           heroku_email: ${{ secrets.EMAIL }}
-          dontuseforce: 1
+          branch: 'master'
+          remote_branch: 'master'
