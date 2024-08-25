@@ -13,4 +13,3 @@ jobs:
           heroku_app_name: 'movie-management-system-deploy'
           heroku_email: ${{ secrets.EMAIL }}
           branch: 'master'
-          remote_branch: 'master'
